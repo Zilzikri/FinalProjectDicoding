@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+#scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 5rem;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#scrollTop-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #000;
+}
+
+header{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 100px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #000;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(185, 0, 182);
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: rgb(185, 0, 182);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;
+}
+
+.content-head {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 10rem;
+}
+
+.content-head .content h4{
+    margin-bottom: 1rem;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.content-head .content h1{
+    color: #000;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+.content-head .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px rgb(185, 0, 182);
+}
+
+.content-head .content p{
+    margin-bottom: 2rem;
+    text-align: justify;
+    color: #000;
+}
+
+.content-head .image{
+    position: relative;
+}
+
+.content-head .image::before{
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 80%;
+    transform: translateX(-45%);
+    font-size: 40rem;
+    font-weight: 1000;
+    line-height: 6rem;
+    color: #000;
+    opacity: 1;
+    z-index: -100;
+}
+
+.content-head .image img{
+    max-width: 700px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.content1 {
+    display: flex;
+    margin: auto;
+    margin-bottom: 5rem;
+    justify-content: space-between;
+}
+
+.content-article {
+    text-align: justify;
+    max-width: 700px;
+}
+
+.content-about {
+    margin-top: 40px;
+}
+
+.aside {
+    border-radius: 5px;
+    max-width: 350px;
+    color: #000;
+    margin-top: 25px;
+    padding: 1rem;
+    align-items: center;
+}
+
+.aside-h4 {
+    margin-top: 10px;
+}
+
+.image-content{
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.content-aside {
+    text-align: justify;
+}
+
+h3{
+    text-align: center;
+}
+
+.image-aside img {
+    max-width: 400px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-card {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.card {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.card1 {
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.album {
+    margin-bottom: 30px;
+}
+
+.content-album {
+    padding: 0 10rem;
+    color: #777474;
+    margin-bottom: 3rem;
+}
+
+footer{
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+footer .column .nav-logo{
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p{
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a{
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover{
+    color: #fff;
+    background-color: rgb(185, 0, 182);
+    border-color: rgb(185, 0, 182);
+}
+
+footer .column h4{
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a{
+    display: block;
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover{
+    color: rgb(185, 0, 182);
+}
+
+.copyright{
+    background-color: #000;
+    position:static;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+    .content-head{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    main .image{
+        grid-area: 1/1/2/2;
+    }
+    .content-artikel{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px){
+    #progress {
+        right: 10px;
+    }
+
+    header .image::before{
+        display: none;
+    }
+
+    .content-album {
+        padding: 10px;
+    }
+
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}
+
