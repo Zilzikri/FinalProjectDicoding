@@ -149,17 +149,18 @@ header{
     position: relative;
 }
 
-.content-head .image::before{
-    content: "o";
+.content-head .content h1::before {
+    content: "●"; /* Menggunakan karakter Unicode untuk bulatan */
     position: absolute;
-    top: 0;
-    left: 80%;
-    transform: translateX(-45%);
+    top: 10%;
+    left: 0;
+    transform: translateX(-45%) rotate(0deg); /* Awalnya tidak diputar */
     font-size: 40rem;
     font-weight: 1000;
     line-height: 6rem;
-    color: #000;
-    opacity: 1;
+    color: transparent; /* Warna awalnya transparan */
+    text-shadow: 0 0 10px rgb(185, 0, 182); /* Efek bayangan neon ungu */
+    animation: spin 5s linear infinite, glow 2s ease-in-out infinite alternate; /* Animasi putaran dan cahaya */
     z-index: -100;
 }
 
@@ -218,11 +219,46 @@ h3{
     justify-content: center;
 }
 
+.aside .image-aside {
+    position: relative;
+}
+
+.image-aside::before {
+    content: "●"; /* Menggunakan karakter Unicode untuk bulatan */
+    position: absolute;
+    top: 0;
+    left: 80%;
+    transform: translateX(-45%) rotate(0deg); /* Awalnya tidak diputar */
+    font-size: 50rem;
+    font-weight: 1000;
+    line-height: 6rem;
+    color: transparent; /* Warna awalnya transparan */
+    text-shadow: 0 0 10px rgb(185, 0, 182); /* Efek bayangan neon ungu */
+    animation: spin 5s linear infinite, glow 2s ease-in-out infinite alternate; /* Animasi putaran dan cahaya */
+    z-index: -100;
+}
+
 .content-card {
     justify-content: center;
     text-align: center;
     align-items: center;
     margin-bottom: 4rem;
+    position: relative;
+}
+
+.content-card::before{
+    content: "●"; /* Menggunakan karakter Unicode untuk bulatan */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-45%) rotate(0deg); /* Awalnya tidak diputar */
+    font-size: 40rem;
+    font-weight: 1000;
+    line-height: 6rem;
+    color: transparent; /* Warna awalnya transparan */
+    text-shadow: 0 0 10px rgb(185, 0, 182); /* Efek bayangan neon ungu */
+    animation: spin 5s linear infinite, glow 2s ease-in-out infinite alternate; /* Animasi putaran dan cahaya */
+    z-index: -100;
 }
 
 .card {
@@ -314,6 +350,16 @@ footer .column > a:hover{
     color: #fff;
     font-size: 0.8rem;
     text-align: center;
+}
+
+@keyframes spin {
+    100% { transform: translateX(-45%) rotate(360deg); } /* Bulatan berputar satu putaran dalam 5 detik */
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px rgba(255,0,255,0.8); }
+    50% { text-shadow: 0 0 20px rgba(255,0,255,0.8); } /* Efek cahaya puncak di tengah animasi */
+    100% { text-shadow: 0 0 10px rgba(255,0,255,0.8); }
 }
 
 
